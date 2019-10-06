@@ -1,6 +1,19 @@
 # GrenadeMapper
 
-A client-server grenade mapper application, using Akka `remote actors` communicating over TCP.
+A client-server GrenadeMapper application, using Akka `remote actors` communicating over TCP.
+
+## Quickstart
+
+* start Server
+```console
+cd Server
+sbt run
+```
+* start Client in a seperate terminal
+```console
+cd Client
+sbt run
+```
 
 ## Client
 
