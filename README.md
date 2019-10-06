@@ -90,7 +90,7 @@ Upon starting the server, its actor is exposed via Remoting at the below URL:
 akka.tcp://ServerSystem@127.0.0.1:5151/user/ServerActor
 ```
 
-To run tests for the Server spec:
+To run tests for the Server spec (over a 9 X 9 grid):
 ```console
 cd Server
 sbt test
