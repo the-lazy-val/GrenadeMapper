@@ -56,7 +56,7 @@ server{
 
 The Server works on the below rules & assumptions:
 
-1. If a Person dies on the same step of 2 Grenade's lifecycle, the Grenade which has lesser time left is given credit for killing the Person, and the Server will response after the lifecycle of that Grenade comes to an end.
-2. If the same Grenade kills 2 Persons in its lifecycle, then it will send 2 responses (for each dead Person) at the end of its lifecycle.
-3. The Person will automatically jump once any Grenade's lifecycle ends.
-4. If the client sends a Person coordinate and at-least 1 grenade is in explosion state, and there is an already alive Person, then this will move the Person to the input co-ordinates.
+* If a Person dies on the same step of 2 Grenade's lifecycle, the Grenade which has lesser time left is given credit for killing the Person, and the Server will response after the lifecycle of that Grenade comes to an end.
+* If the same Grenade kills 2 Persons in its lifecycle, then it will send 2 responses (for each dead Person) at the end of its lifecycle.
+* The Person will automatically jump once any Grenade's lifecycle ends.
+* If the client sends a Person coordinate and at-least 1 grenade is in explosion state, and there is an already alive Person, then this will move the Person to the input co-ordinates.
