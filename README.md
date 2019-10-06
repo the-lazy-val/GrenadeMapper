@@ -53,7 +53,7 @@ akka.tcp://ClientSystem@127.0.0.1:5150/user/ClientActor
 
 ## Server
 
-The Server is responsible for maintaining the state of the Grid as well as updating the Grid as per client's input.
+The Server is responsible for maintaining the state of the grid as well as updating the GridState as per client's input.
 
 The Server runs autonomously, i.e. even if the Client has stopped sending requests to the Server, it will keep updating the GridState at a regular time-interval defined in the `application.conf` file (and print the visual reprentation of the Grid for each interval):
 
