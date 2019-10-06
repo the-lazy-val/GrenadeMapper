@@ -40,9 +40,9 @@ client{
 
 ## Server
 
-The server is responsible for maintaining the state of the Grid as well as updating the Grid as per client's input.
+The Server is responsible for maintaining the state of the Grid as well as updating the Grid as per client's input.
 
-The server runs autonomously, i.e. even if the client has stopped sending requests to the Server, it will keep updating the GridState at a regular time-interval defined in the `application.conf` file (and print the visual reprentation of the grid for each interval):
+The Server runs autonomously, i.e. even if the Client has stopped sending requests to the Server, it will keep updating the GridState at a regular time-interval defined in the `application.conf` file (and print the visual reprentation of the Grid for each interval):
 
 ```properties
 server{
@@ -56,7 +56,7 @@ server{
 
 The Server works on the below rules & assumptions:
 
-1. If a person dies on the same step of 2 Grenade's lifecycle, the grenade which has lesser time left is given credit for killing the person, and the Server will response after the lifecycle of that grenade comes to an end.
-2. If the same grenade kills 2 person in its lifecycle, then it will send 2 responses (for each dead person) at the end of its lifecycle.
-3. The person will automatically jump once any grenade's lifecycle ends.
-4. If the client sends a PERSON coordinate and at-least 1 grenade is in explosion state, and there is an already alive person, then this will move the person to the input co-ordinates.
+1. If a Person dies on the same step of 2 Grenade's lifecycle, the Grenade which has lesser time left is given credit for killing the Person, and the Server will response after the lifecycle of that Grenade comes to an end.
+2. If the same Grenade kills 2 Persons in its lifecycle, then it will send 2 responses (for each dead Person) at the end of its lifecycle.
+3. The Person will automatically jump once any Grenade's lifecycle ends.
+4. If the client sends a Person coordinate and at-least 1 grenade is in explosion state, and there is an already alive Person, then this will move the Person to the input co-ordinates.
