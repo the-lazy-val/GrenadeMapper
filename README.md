@@ -38,6 +38,14 @@ client{
 * max_bomb_radius -> max radius for each bomb
 * tick_interval_seconds -> interval in seconds after which the Client can randomly send/not send a message to the Server for spawning a Person/Grenade.
 
+The client events are modelled as below:
+```scala
+trait Event
+case object Start extends Event
+case object Tick extends Event
+case class Message(msg: String) extends Event
+```
+
 ## Server
 
 The Server is responsible for maintaining the state of the Grid as well as updating the Grid as per client's input.
@@ -60,6 +68,17 @@ The Server works on the below rules & assumptions:
 * If the same Grenade kills 2 Persons in its lifecycle, then it will send 2 responses (for each dead Person) at the end of its lifecycle.
 * The Person will automatically jump once any Grenade's lifecycle ends.
 * If the client sends a Person coordinate and at-least 1 grenade is in explosion state, and there is an already alive Person, then this will move the Person to the input co-ordinates.
+
+
+The client events are modelled as below:
+```scala
+trait Event
+case object Start extends Event
+case object Tick extends Event
+case object PersonDead extends Event
+case object InvalidCoordinates extends Event
+case class Message(msg: String) extends Event
+```
 
 To run tests for the Server spec:
 ```console
