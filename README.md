@@ -60,3 +60,9 @@ The Server works on the below rules & assumptions:
 * If the same Grenade kills 2 Persons in its lifecycle, then it will send 2 responses (for each dead Person) at the end of its lifecycle.
 * The Person will automatically jump once any Grenade's lifecycle ends.
 * If the client sends a Person coordinate and at-least 1 grenade is in explosion state, and there is an already alive Person, then this will move the Person to the input co-ordinates.
+
+To run tests for the Server spec:
+```console
+cd Server
+sbt test
+```
