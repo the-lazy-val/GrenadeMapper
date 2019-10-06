@@ -46,6 +46,11 @@ case object Tick extends Event
 case class Message(msg: String) extends Event
 ```
 
+Upon starting the client, its actor is exposed via Remoting at the below URL:
+```
+akka.tcp://ClientSystem@127.0.0.1:5150/user/ClientActor
+```
+
 ## Server
 
 The Server is responsible for maintaining the state of the Grid as well as updating the Grid as per client's input.
@@ -78,6 +83,11 @@ case object Tick extends Event
 case object PersonDead extends Event
 case object InvalidCoordinates extends Event
 case class Message(msg: String) extends Event
+```
+
+Upon starting the server, its actor is exposed via Remoting at the below URL:
+```
+akka.tcp://ServerSystem@127.0.0.1:5151/user/ServerActor
 ```
 
 To run tests for the Server spec:
