@@ -1,6 +1,6 @@
 # GrenadeMapper
 
-A client-server GrenadeMapper application, using Akka `remote actors` communicating over TCP.
+A client-server GrenadeMapper application, using Akka [`remote actors`](https://doc.akka.io/docs/akka/current/remoting.html) communicating over TCP.
 
 ## Quickstart
 
